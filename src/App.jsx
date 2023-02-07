@@ -39,7 +39,7 @@ function App() {
   return (
     <div className="App">
       <nav className="navbar navbar-light bg-light mb-5">
-        <div className="container col-10">
+        <div className="container col-10 col-md-6">
           <a
             className="navbar-brand"
             href="https://pt.wikipedia.org/wiki/Minecraft"
@@ -60,7 +60,7 @@ function App() {
 
       {!loading ? <h1 className="my-4 title">- Recipes</h1> : null}
 
-      <div className="d-flex flex-wrap col-10 mx-auto justify-content-center">
+      <div className="d-flex flex-wrap col-10  col-md-6 mx-auto justify-content-center">
         {!loading ? (
           recipes.map((recipeUrl, idx) => {
             if (recipeUrl) {

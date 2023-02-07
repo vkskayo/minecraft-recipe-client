@@ -33,7 +33,7 @@ export function CraftingTable() {
 
   return (
     <>
-      <div className="d-flex flex-column col-10 mx-auto">
+      <div className="d-flex flex-column col-10  col-md-6 mx-auto">
         <div className="d-flex flex-column flex-md-row justify-content-start align-items-center gap-5">
           <div className="crafting-table d-flex flex-wrap">
             {crafts.length >= 1 ? (
