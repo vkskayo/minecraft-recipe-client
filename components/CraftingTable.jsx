@@ -33,8 +33,8 @@ export function CraftingTable() {
 
   return (
     <>
-      <div className="d-flex flex-column">
-        <div className="d-flex flex-column flex-md-row justify-content-center align-items-center gap-5">
+      <div className="d-flex flex-column col-10 mx-auto">
+        <div className="d-flex flex-column flex-md-row justify-content-start align-items-center gap-5">
           <div className="crafting-table d-flex flex-wrap">
             {crafts.length >= 1 ? (
               crafts.map((arr, idx) => {
@@ -125,7 +125,7 @@ export function CraftingTable() {
             ) : null}
           </div>
         </div>
-        <div className="my-5 d-flex justify-content-center gap-3">
+        <div className="my-5 d-flex justify-content-md-start justify-content-center gap-3">
           <button
             onClick={() => {
               loadCraft();
