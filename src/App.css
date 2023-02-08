@@ -15,6 +15,10 @@ body {
   background-color: #c6c6c6;
 }
 
+.craft {
+  max-width: 100px;
+}
+
 .iventory-bg {
   background-color: #888;
   height: 64px;
@@ -71,4 +75,8 @@ body {
 
 .title {
   font-family: "VT323", monospace;
+}
+p {
+  font-family: "VT323", monospace;
+  font-size: 25px;
 }
