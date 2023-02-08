@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useQuery, gql, useLazyQuery } from "@apollo/client";
 import { FaEquals } from "react-icons/fa";
 import { FaGripLinesVertical } from "react-icons/fa";
-import { selectedItem } from "../atoms/selectedItem";
+import { selectedItem } from "../../atoms/selectedItem";
 import { useRecoilState, useRecoilValue } from "recoil";
 
 export function Modal() {

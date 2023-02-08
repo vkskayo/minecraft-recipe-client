@@ -1,14 +1,14 @@
 import "./App.css";
 import { useQuery, gql, useLazyQuery } from "@apollo/client";
 import { useState, useEffect } from "react";
-import { CraftingTable } from "../components/CraftingTable";
 import { SiMinecraft } from "react-icons/si";
 import { BsGithub } from "react-icons/bs";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { selectedItem } from "../atoms/selectedItem";
-import { Modal } from "../components/modal";
+import { selectedItem } from "../atoms/selectedItem.js";
 import { LoadingSpinner } from "@apollo/space-kit/Loaders/LoadingSpinner";
 import styled from "@emotion/styled";
+import { Modal } from "./components/modal";
+import { CraftingTable } from "./components/CraftingTable";
 
 function App() {
   const [recipes, setRecipes] = useState([]);

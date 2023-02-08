@@ -1,41 +1,65 @@
+import { useLocation, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+
 export function Map() {
   const mapStyle = {
     width: 250,
     height: 250,
   };
   const containerStyle = {
-    width: 250,
-    height: 250,
+    width: 320,
+    height: 320,
     backgroundImage: `url("https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.9/map/map_background.png")`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
   };
 
   const iconSize = {
-    width: 25,
-    height: 25,
+    width: 35,
+    height: 35,
   };
+
+  const [path, setPath] = useState("/");
+  const actualPath = useLocation().pathname;
 
   const pointing = {
     cursor: "pointer",
   };
 
+  useEffect(() => {
+    setPath(actualPath);
+  }, []);
+
   return (
     <>
       <div style={containerStyle} className="position-relative p-5 ">
+        {path !== "/foods" ? (
+          <Link to="/foods">
+            <div className="d-flex align-items-center gap-2 hover-effect mx-2">
+              <img
+                style={iconSize}
+                src="https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.18.1/items/apple.png"
+              />
+              <p className="indice-1 m-0 text-dark">Foods</p>
+            </div>
+          </Link>
+        ) : null}
+
+        {path !== "/" ? (
+          <Link to="/">
+            <div className="d-flex align-items-center gap-2 hover-effect mx-2">
+              <img
+                style={iconSize}
+                src="https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.19.1/blocks/crafting_table_front.png"
+              />
+              <p className="indice-1 m-0 text-dark">Recipes</p>
+            </div>
+          </Link>
+        ) : null}
+
         <div
           style={pointing}
-          className="d-flex align-items-center gap-2 hover-effect"
-        >
-          <img
-            style={iconSize}
-            src="https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.18.1/items/apple.png"
-          />
-          <p className="indice-1 m-0">Foods</p>
-        </div>
-        <div
-          style={pointing}
-          className="d-flex align-items-center gap-2 hover-effect"
+          className="d-flex align-items-center gap-2 hover-effect mx-2"
         >
           <img
             style={iconSize}
@@ -45,7 +69,7 @@ export function Map() {
         </div>
         <div
           style={pointing}
-          className="d-flex align-items-center gap-2 hover-effect"
+          className="d-flex align-items-center gap-2 hover-effect mx-2"
         >
           <img
             style={iconSize}
@@ -54,7 +78,7 @@ export function Map() {
           <p className="indice-3 m-0">Enchantments</p>
         </div>
 
-        <p style={pointing} className="indice-4 fs-4 mt-4 hover-effect">
+        <p style={pointing} className="indice-4 fs-2 mt-4 hover-effect mx-2">
           (In development)
         </p>
       </div>
