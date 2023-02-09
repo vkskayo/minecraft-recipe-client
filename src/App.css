@@ -2,7 +2,6 @@
   margin: 0 auto;
   width: 100vw;
   text-align: center;
-  height: 100%;
 }
 
 .logo {
@@ -49,6 +48,10 @@ body {
 
 .crafting-table {
   width: 192px;
+}
+
+.body-food {
+  min-height: 700px;
 }
 
 @keyframes logo-spin {
